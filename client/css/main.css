@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/lato/Lato-Hairline.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/lato/Lato-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body { 
+	font-family: 'Noteworthy', sans-serif; 
+	
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-font-smoothing: antialiased !important;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	border: 5px solid #fff;
+	color: white;
+}
+
+.fontello {
+	font-family: fontello;
+}
+
+a {
+	color: white;
+}
+
+.results {
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 10px;
+}
+
+.search {
+	width: 80%;
+	margin-left: 10%;
+	font-size: 1.2rem;
+	outline: none;
+	background: transparent;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+	color: white;
+	text-align: center;
+	
+	margin-top: 60px;
+}
+
+.load {
+	width: 40%;
+	margin-left: 30%;
+	height: 30px;
+	border-radius: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 1em;
+	background: wheat;
+}
+
+@media screen and (min-width: 60em) {
+  input {
+    font-size: 3rem;
+  }
+
+}
+
+.header {
+	font-family: 'Noteworthy', sans-serif; 
+	font-size: 2rem; 
+	font-weight: 900; 
+	color: #fff; 
+	position: absolute; 
+	top: 40px;
+	left: 40px;
+	max-width: 150px;
+	padding-left: 5px;
+	opacity: 0.6;
+}
+
+.icon {
+	font-size: 1.5rem; 
+	font-weight: 900; 
+	color: #fff; 
+	position: absolute; 
+	top: 55px;
+	right: 40px;
+	max-width: 150px;
+	padding-left: 5px;
+	opacity: 0.6;
+}
+
+.header:hover, .icon:hover {
+	color: #E6C2B3;
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.jMenu {
+	float: right;
+}
+
+.recipe {
+	border:1px solid;
+	padding: 5px;
+}
+
+.recipe h2 {
+	text-align: center;
+}
+
+.recipe p {
+	text-align: right;
+	font-style: italic;
+}
+.inner {
+	line-height: 1.3;
+	max-width: 62rem;
+	margin: 0 auto;
+	padding: 2rem 2rem 0 2rem;
+	height: 100%;
+}
+
+.container {
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.6);
+	overflow: auto;
+}
+
+.last {
+	opacity: 0;
+}
+.last:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 0px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+::selection {
+	background: #E6C2B3;
+}
+::-moz-selection {
+	background: #E6C2B3;
+}
+
+.results {
+	overflow: auto;
+}
+
+.license {
+	bottom: 0;
+	float: right;
+	right: 0;
+}

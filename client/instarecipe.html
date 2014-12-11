@@ -1,0 +1,49 @@
+<html>
+<head>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'> -->
+	<link href='css/main.css' rel='stylesheet' type='text/css'>
+	<link href='bower_components/components-font-awesome/css/font-awesome.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+	
+	<div class='container'>
+		<div ng-app='instarecipe' ng-controller='recipeCtrl'>
+			
+			<div class="header">InstaRecipe</div>
+			<!--<div class="icon" ng-click="showSideRecipes = !showSideRecipes"><i id="jMenu" class="fa fa-list"> </i></div> -->
+			
+			<div class="inner">
+				<input ng-model='searchTerm' type="text" class="search" placeholder="What do you want to cook today?" ng-enter='search()'>
+			<section class='results'>
+				<article class='recipe' ng-cloak ng-repeat='recipe in recipes'>
+					<h2>
+						<a class="url" ng-href='{{recipe.url}}'>{{recipe.name}}</a>
+					</h2>
+					<ul>
+						<li ng-repeat='ingredient in recipe.ingredients'>{{ ingredient }}</li>
+					</ul>
+					<p>
+						{{recipe.description}}
+						<a class="more-url" ng-href='{{recipe.url}}' target="_blank">... more at {{recipe.source}}</a>
+					</p>
+				</article>
+
+				<div class='load-more' ng-cloak ng-hide='allResults'>
+					<button type="button" class="load" ng-click="loadMore()">Load More</button>
+				</div>
+			</section>
+			</div>
+
+			<div class="license">Source of Image: freefoodphotos.com</div>
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.js" type="text/javascript"></script>
+  <script src="bower_components/elasticsearch/elasticsearch.angular.js" type="text/javascript"></script>
+  <script src="bower_components/jquery/jquery.js" type="text/javascript"></script>
+	<script type='text/javascript' src='instarecipe.js'> </script>
+	<script type='text/javascript' src='script.js'> </script>
+
+</body>
+</html>
